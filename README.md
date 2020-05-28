@@ -29,7 +29,19 @@ Test your Gradle installation by typing gradle -v in the CLI. The output should 
 
 # Hello World
 
+Let's make a simple gradle project. Gradle tasks can be written using Groovy code from inside a projects build.gradle file. These tasks can then be executed using ```> gradle [taskname]``` at the terminal or by executing the task from within an IDE such as Eclipse. To create the Hello World example in gradle we must define a task that will print a string to the console using Groovy. We will use Groovy's ```printLn``` to call Java's ```System.out.printLn``` method to print the text to the console.
 
+```javascript
+##build.gradle
+task hello {
+    doLast {
+        println 'Hello world!'
+    }
+}
+```
+
+
+ 
 
 
 # Reference 
